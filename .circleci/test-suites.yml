@@ -1,0 +1,5 @@
+name: pytest
+discover: find tests -type f -name 'test_*.py' | sort
+run: python -m pytest --junitxml=<< outputs.junit >> << test.atoms >>
+outputs:
+  junit: test-reports/pytest.xml
